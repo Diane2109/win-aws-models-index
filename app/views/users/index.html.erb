@@ -20,7 +20,7 @@
          <%= link_to "Modifier", edit_user_path(user), class: "btn btn-xs btn-primary" %>
         <% if @current_user == user %>
         <% else %>
-          <%= link_to "Supprimer ce membre", user_path(user), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ce membre ?"}, class: "btn btn-xs btn-danger" %>
+          <%= link_to "Supprimer ce membre", user_path(user), method: :get, data: { confirm: "Voulez-vous vraiment supprimer ce membre ?"}, class: "btn btn-xs btn-danger" %>
         <% end %>
         </div>
         <% end %>

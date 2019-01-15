@@ -65,7 +65,7 @@
                 </li>
                 <% if logged_in? %>
                 <li><%= link_to "Dashboard Admin", users_path, method: :get, class: "btn btn-xs background-grey" %></li>
-                <li><%= link_to "Se déconnecter", logout_path, method: :delete, class: "btn btn-xs btn-danger" %></li>
+                <li><%= link_to "Se déconnecter", logout_path, method: :get, class: "btn btn-xs btn-danger" %></li>
                 <% end %>
               </ul>
             </div>
