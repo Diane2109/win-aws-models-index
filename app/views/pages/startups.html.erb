@@ -76,22 +76,28 @@
     <section class="p-0" id="portfolio">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6 contouring">
-            <div class="portfolio-box">
-              <img class="img-fluid" src="assets/portfolio/oto.png" alt="Winnovation - Bouygues US">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    In the process of signing
-                  </div>
-                  <div class="project-name">
-                    OTO.ai
+          <% Partner.all.each do |partner| %>
+
+            <% if partner.company_logo && partner.grand_groupe == false %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag partner.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <% partner.status %>
+                      </div>
+                      <div class="project-name">
+                        <% partner.company_name %>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 contouring">
+            <% end %>
+
+           <% end %>
+          <%# <div class="col-lg-4 col-sm-6 contouring">
             <div class="portfolio-box">
               <img class="img-fluid" src="assets/portfolio/mila.png" alt="Winnovation - Bouygues US">
               <div class="portfolio-box-caption">
@@ -105,8 +111,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 contouring">
+          </div> %>
+          <%# <div class="col-lg-4 col-sm-6 contouring">
             <div class="portfolio-box">
               <img class="img-fluid" src="assets/portfolio/dashbot.png" alt="Winnovation - Bouygues US">
               <div class="portfolio-box-caption">
@@ -120,7 +126,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> %>
           <!-- <div class="col-lg-4 col-sm-6 contouring">
             <div class="portfolio-box">
               <img class="img-fluid" src="assets/portfolio/AA.png" alt="Winnovation - Bouygues US">

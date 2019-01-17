@@ -64,7 +64,8 @@
                   <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
                 </li>
                 <% if logged_in? %>
-                <li><%= link_to "Dashboard Admin", users_path, method: :get, class: "btn btn-xs background-grey" %></li>
+                <li><%= link_to "Admin Users", users_path, method: :get, class: "btn btn-xs background-grey" %></li>
+                <li><%= link_to "Admin Partners", partners_path, method: :get, class: "btn btn-xs background-grey" %></li>
                 <li><%= link_to "Se déconnecter", logout_path, method: :get, class: "btn btn-xs btn-danger" %></li>
                 <% end %>
               </ul>
