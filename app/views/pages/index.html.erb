@@ -192,7 +192,7 @@
           <% i=0 %>
           <% j=1 %>
           <% while i < 3 %>
-            <% if @partners.find(j).company_logo && @partners.find(j).grand_groupe == true %>
+            <% if @partners.find(j) && @partners.find(j).company_logo && @partners.find(j).grand_groupe == true %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
                   <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
@@ -216,7 +216,7 @@
           <% i=0 %>
           <% j=1 %>
           <% while i < 3 %>
-            <% if @partners.find(j).company_logo && @partners.find(j).grand_groupe == false %>
+            <% if @partners.find(j) && @partners.find(j).company_logo && @partners.find(j).grand_groupe == false %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
                   <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
