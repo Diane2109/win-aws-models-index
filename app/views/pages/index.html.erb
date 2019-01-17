@@ -188,6 +188,59 @@
     <section class="p-0" id="portfolio">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
+
+          <% i=0 %>
+          <% j=1 %>
+          <% while i < 3 %>
+            <% if Partner.find(j).company_logo && Partner.find(j).grand_groupe == true %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag Partner.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= Partner.find(j).status %>
+                      </div>
+                      <div class="project-name">
+                        <%= Partner.find(j).company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% i=i+1 %>
+            <% end %>
+            <% j=j+1 %>
+            <% end %>
+
+          <% i=0 %>
+          <% j=1 %>
+          <% while i < 3 %>
+            <% if Partner.find(j).company_logo && Partner.find(j).grand_groupe == false %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag Partner.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= Partner.find(j).status %>
+                      </div>
+                      <div class="project-name">
+                        <%= Partner.find(j).company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% i=i+1 %>
+            <% end %>
+            <% j=j+1 %>
+            <% end %>
+
+
+
+
+<!--
           <div class="col-lg-4 col-sm-6 contouring">
             <div class="portfolio-box">
               <img class="img-fluid" src="assets/portfolio/amazon.png" alt="Bouygues US Winnovation">
@@ -203,6 +256,7 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-sm-6 contouring">
             <div class="portfolio-box">
               <img class="img-fluid" src="assets/portfolio/mila.png" alt="Winnovation - Bouygues US">
@@ -279,7 +333,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="bg-dark text-white" id="team">

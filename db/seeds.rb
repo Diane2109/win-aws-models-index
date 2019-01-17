@@ -22,5 +22,5 @@ Partner.create(company_name: "vmware", status: "NETWORK AND CLOUD OPTIMIZATIONS"
 Partner.create(company_name: "Salesforce", status: "FUTURE OF WORK OFFICES", grand_groupe: true)
 
 Partner.create(company_name: "OTO.ai", status: "IN THE PROCESS OF SIGNING", grand_groupe: false)
-Partner.create(company_name: "Mila", status: "NDUSTRIALIZATION", grand_groupe: false)
-Partner.create(company_name: "Dashbot", status: "NDUSTRIALIZATION", grand_groupe: false)
+Partner.create(company_name: "Mila", status: "INDUSTRIALIZATION", grand_groupe: false)
+Partner.create(company_name: "Dashbot", status: "INDUSTRIALIZATION", grand_groupe: false)
