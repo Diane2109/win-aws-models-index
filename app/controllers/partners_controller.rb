@@ -45,6 +45,9 @@ class PartnersController < ApplicationController
 
   def destroy
     require_user
+    @partner.destroy
+    flash[:notice] = "#{@partner.company_name} a bien été supprimé."
+    redirect_to partners_path
   end
 
   private

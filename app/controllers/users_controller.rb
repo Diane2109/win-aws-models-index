@@ -52,7 +52,7 @@ class UsersController < ApplicationController
       flash[:notice] = "#{@user.first_name} #{@user.last_name} a bien été supprimé."
       redirect_to users_path
     end
-    end
+  end
 
   private
     def user_params

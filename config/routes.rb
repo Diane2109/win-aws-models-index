@@ -21,11 +21,11 @@ Rails.application.routes.draw do
   resources :users, except: [:new], except: [:destroy]
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
-  get 'destroy', to: 'users#destroy'
+  get 'users/:id/delete', to: 'users#destroy', as: 'delete_user'
 
-  resources :partners, except: [:destroy]
+  resources :partners, except: [:destroy], except: [:new]
   get 'new', to: 'partners#new'
-  get 'destroy', to: 'partners#destroy'
+  get 'partners/:id/delete', to: 'partners#destroy', as: 'delete_partner'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
