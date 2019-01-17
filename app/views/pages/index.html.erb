@@ -192,17 +192,17 @@
           <% i=0 %>
           <% j=1 %>
           <% while i < 3 %>
-            <% if Partner.find(j).company_logo && Partner.find(j).grand_groupe == true %>
+            <% if @partners.find(j).company_logo && @partners.find(j).grand_groupe == true %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
-                  <%= image_tag Partner.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
                   <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                       <div class="project-category text-faded">
-                        <%= Partner.find(j).status %>
+                        <%= @partners.find(j).status %>
                       </div>
                       <div class="project-name">
-                        <%= Partner.find(j).company_name %>
+                        <%= @partners.find(j).company_name %>
                       </div>
                     </div>
                   </div>
@@ -216,17 +216,17 @@
           <% i=0 %>
           <% j=1 %>
           <% while i < 3 %>
-            <% if Partner.find(j).company_logo && Partner.find(j).grand_groupe == false %>
+            <% if @partners.find(j).company_logo && @partners.find(j).grand_groupe == false %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
-                  <%= image_tag Partner.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
                   <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                       <div class="project-category text-faded">
-                        <%= Partner.find(j).status %>
+                        <%= @partners.find(j).status %>
                       </div>
                       <div class="project-name">
-                        <%= Partner.find(j).company_name %>
+                        <%= @partners.find(j).company_name %>
                       </div>
                     </div>
                   </div>
