@@ -15,4 +15,9 @@
 # User.create(first_name: "Adrien", last_name: "Chaussinand", email: "adrien@winnovation.net", password: "USoffice600!", title: "VP Real Estate", description:"Adrien conducted scientific research during one year at Ecole Polytechnique Fédérale of Lausanne. He then joined Bouygues Immobilier in 2015 in the Innovation Department. He worked on several innovative projects among which 'Entre voisins', a private residential social network. In April 2018, Adrien took charge of Bouygues Group - MIT relationship in Boston.", address:"600 California St, 11th floor 94108 San Francisco, CA USA")
 
 
-Partner.create(company_name: "Google", status: "Partnership")
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: true)
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: true)
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: true)
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: false)
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: false)
+Partner.create(company_name: "Google", status: "Partnership", grand_groupe: false)
