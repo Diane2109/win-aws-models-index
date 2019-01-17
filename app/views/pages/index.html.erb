@@ -186,56 +186,124 @@
 
 
     <section class="p-0" id="portfolio">
+
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
 
-          <% i=0 %>
-          <% j=15 %>
-          <% while i < 3 %>
-            <% if @partners.find(j) && @partners.find(j).company_logo && @partners.find(j).grand_groupe == true %>
+            <% if !@partners_gg.first.nil? && @partners_gg.first.company_logo %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
-                  <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <%= image_tag @partners_gg.first.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
                   <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                       <div class="project-category text-faded">
-                        <%= @partners.find(j).status %>
+                        <%= @partners_gg.first.status %>
                       </div>
                       <div class="project-name">
-                        <%= @partners.find(j).company_name %>
+                        <%= @partners_gg.first.company_name %>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <% i=i+1 %>
-            <% end %>
-            <% j=j+1 %>
             <% end %>
 
-          <% i=0 %>
-          <% j=15 %>
-          <% while i < 3 %>
-            <% if @partners.find(j) && @partners.find(j).company_logo && @partners.find(j).grand_groupe == false %>
+            <% if !@partners_gg.second.nil? && @partners_gg.second.company_logo %>
               <div class="col-lg-4 col-sm-6 contouring">
                 <div class="portfolio-box">
-                  <%= image_tag @partners.find(j).company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <%= image_tag @partners_gg.second.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
                   <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                       <div class="project-category text-faded">
-                        <%= @partners.find(j).status %>
+                        <%= @partners_gg.second.status %>
                       </div>
                       <div class="project-name">
-                        <%= @partners.find(j).company_name %>
+                        <%= @partners_gg.second.company_name %>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <% i=i+1 %>
             <% end %>
-            <% j=j+1 %>
+
+            <% if !@partners_gg.third.nil? && @partners_gg.third.company_logo %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag @partners_gg.third.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= @partners_gg.third.status %>
+                      </div>
+                      <div class="project-name">
+                        <%= @partners_gg.third.company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <% end %>
+
+            <% if !@partners_startups.first.nil? && @partners_startups.first.company_logo %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag @partners_startups.first.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= @partners_startups.first.status %>
+                      </div>
+                      <div class="project-name">
+                        <%= @partners_startups.first.company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+            <% if !@partners_startups.second.nil? && @partners_startups.second.company_logo %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag @partners_startups.second.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= @partners_startups.second.status %>
+                      </div>
+                      <div class="project-name">
+                        <%= @partners_startups.second.company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+            <% if !@partners_startups.third.nil? && @partners_startups.third.company_logo %>
+              <div class="col-lg-4 col-sm-6 contouring">
+                <div class="portfolio-box">
+                  <%= image_tag @partners_startups.third.company_logo, class:"img-fluid", alt:"Winnovation - Bouygues US" %>
+                  <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                      <div class="project-category text-faded">
+                        <%= @partners_startups.third.status %>
+                      </div>
+                      <div class="project-name">
+                        <%= @partners_startups.third.company_name %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+
+
+
+
+
+
 
 
 
